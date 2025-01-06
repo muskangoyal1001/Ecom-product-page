@@ -1,20 +1,13 @@
 function swapImage(thumbnail) {
-    // Get the current large image
-    const largeImage = document.getElementById('currentImage');
-    
-    // Get the src of the current large image
-    const largeImageSrc = largeImage.src;
-    
-    // Swap the large image with the thumbnail
-    largeImage.src = thumbnail.src;
-    
-    // Swap the thumbnail with the previous large image
-    thumbnail.src = largeImageSrc;
-  }
-  // script.js
+  const largeImage = document.getElementById('currentImage');
+  const largeImageSrc = largeImage.src;
+  largeImage.src = thumbnail.src;
 
- // Function to update the quantity
- function updateQuantity(amount) {
+  thumbnail.src = largeImageSrc;
+}
+
+
+function updateQuantity(amount) {
   const quantityInput = document.getElementById('productQuantity');
   let currentQuantity = parseInt(quantityInput.value);
   currentQuantity += amount;
@@ -23,4 +16,4 @@ function swapImage(thumbnail) {
   }
   quantityInput.value = currentQuantity;
 }
-  
+
