@@ -17,3 +17,13 @@ function updateQuantity(amount) {
   quantityInput.value = currentQuantity;
 }
 
+
+function toggleMenu() {
+  const nav = document.querySelector('.nav');
+  const menuIcon = document.querySelector('.menu-icon');
+  const crossIcon = document.querySelector('.cross-icon');
+
+  nav.classList.toggle('active');
+  menuIcon.classList.toggle('hidden');
+  crossIcon.classList.toggle('hidden');
+}
